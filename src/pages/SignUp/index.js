@@ -24,7 +24,6 @@ export default function SignUp() {
           placeholder="Nome"
           autoCorrect={false}
           autoCapitalize="none"
-          secureTextEntry={true}
           value={nome}
           onChangeText={ (text) => setNome(text) }
           />
@@ -46,6 +45,7 @@ export default function SignUp() {
           autoCorrect={false}
           autoCapitalize="none"
           value={password}
+          secureTextEntry={true}
           onChangeText={ (text) => setPassword(text) }
           />
         </AreaInput>
