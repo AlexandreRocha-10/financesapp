@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { SafeAreaView, Keyboard, TouchableWithoutFeedback, Alert} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 import Header from '../../components/Header';
 import { Background, Input, SubmitButton, SubmitText} from './styles';
 import Picker from '../../components/Picker/index.android';
@@ -67,6 +69,15 @@ export default function New() {
   return (
     <TouchableWithoutFeedback onPress={ () => Keyboard.dismiss() }>
     <Background>
+        <View
+          style={{
+            marginBottom: 20,
+            backgroundColor: '#000',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <StatusBar style="light" />
+        </View>
         <Header/>
 
         <SafeAreaView style={{ alignItems: 'center' }}>
